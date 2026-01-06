@@ -1,8 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { PageLayout } from '../components/layout/PageLayout';
 import { Card } from '../components/ui/Card';
-import { Button } from '../components/ui/Button';
 
 export const Protection: React.FC = () => {
   return (

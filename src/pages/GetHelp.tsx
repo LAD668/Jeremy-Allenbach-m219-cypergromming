@@ -1,9 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { PageLayout } from '../components/layout/PageLayout';
 import { Card } from '../components/ui/Card';
 import { Button } from '../components/ui/Button';
-import { Alert } from '../components/ui/Alert';
 import { HelpHotline } from '../components/ui/HelpHotline';
 
 export const GetHelp: React.FC = () => {

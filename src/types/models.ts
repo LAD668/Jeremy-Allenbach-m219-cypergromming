@@ -77,6 +77,9 @@ export interface WarningSign {
   description: string;
   category: 'communication' | 'behavior' | 'requests' | 'isolation';
   severity: 'low' | 'medium' | 'high' | 'critical';
+  explanation?: string;
+  examples?: string[];
+  whyImportant?: string;
 }
 
 export interface WarningSignsTrainingState {
