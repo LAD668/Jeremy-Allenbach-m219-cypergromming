@@ -7,8 +7,8 @@ export const Protection: React.FC = () => {
     <PageLayout>
       <section className="bg-gradient-to-r from-[#1D4ED8] to-[#2563eb] text-white py-12">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl font-bold mb-4">Schutz & Praevention</h1>
-          <p className="text-xl text-blue-100">Praktische Strategien fuer Online-Sicherheit</p>
+          <h1 className="text-4xl font-bold mb-4">Schutz & Prävention</h1>
+          <p className="text-xl text-blue-100">Praktische Strategien für Online-Sicherheit</p>
         </div>
       </section>
 
@@ -16,13 +16,13 @@ export const Protection: React.FC = () => {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#1A1A1A] text-center">Warum Praevention wichtig ist</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#1A1A1A] text-center">Warum Prävention wichtig ist</h2>
             <p className="text-lg text-[#6B6B6B] mb-4 leading-relaxed">
-              Der beste Schutz vor Cyber-Grooming ist Aufklaerung und Praevention. Wenn Kinder und Jugendliche wissen,
-              worauf sie achten muessen und wie sie sich schuetzen koennen, sind sie besser vorbereitet.
+              Der beste Schutz vor Cyber-Grooming ist Aufklärung und Prävention. Wenn Kinder und Jugendliche wissen,
+              worauf sie achten müssen und wie sie sich schützen können, sind sie besser vorbereitet.
             </p>
             <p className="text-lg text-[#6B6B6B] leading-relaxed">
-              Praevention bedeutet nicht, Kindern die Nutzung des Internets zu verbieten, sondern sie zu befaehigen,
+              Prävention bedeutet nicht, Kindern die Nutzung des Internets zu verbieten, sondern sie zu befähigen,
               sicher und verantwortungsvoll online zu sein. Offene Kommunikation und klare Regeln sind dabei entscheidend.
             </p>
           </div>
@@ -32,7 +32,7 @@ export const Protection: React.FC = () => {
       {/* For Children & Teenagers - Expanded */}
       <section className="py-16 bg-[#FAF8F5]">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center text-[#1A1A1A]">Fuer Kinder & Jugendliche</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center text-[#1A1A1A]">Für Kinder & Jugendliche</h2>
           <p className="text-lg text-center text-[#6B6B6B] mb-12 leading-relaxed max-w-3xl mx-auto">
             Diese praktischen Tipps helfen dir, sicher online zu sein und Warnzeichen fruehzeitig zu erkennen.
           </p>
@@ -41,14 +41,14 @@ export const Protection: React.FC = () => {
             {[
               { 
                 icon: 'P', 
-                title: 'Persoenliche Informationen privat halten', 
+                title: 'Persönliche Informationen privat halten', 
                 tips: [
                   'Niemals echten Namen, Adresse, Schule oder Telefonnummer teilen',
                   'Keine Fotos posten, die deinen Standort zeigen (z.B. Schulgebaeude, Hausnummer)',
                   'Datenschutzeinstellungen auf allen Social-Media-Konten nutzen',
-                  'Ueberpruefe regelmaessig, wer deine Posts sehen kann'
+                  'Überprüfe regelmäßig, wer deine Posts sehen kann'
                 ],
-                details: 'Persoenliche Informationen sind wie dein Hausschluessel - sie gehoeren nicht in fremde Haende. Groomer nutzen diese Daten, um dich zu finden oder zu erpressen. Teile nur das Minimum, das noetig ist, und nur mit Menschen, die du im echten Leben kennst.'
+                details: 'Persönliche Informationen sind wie dein Hausschlüssel - sie gehören nicht in fremde Hände. Groomer nutzen diese Daten, um dich zu finden oder zu erpressen. Teile nur das Minimum, das nötig ist, und nur mit Menschen, die du im echten Leben kennst.'
               },
               { 
                 icon: 'K', 
@@ -56,32 +56,32 @@ export const Protection: React.FC = () => {
                 tips: [
                   'Nur Freundschaftsanfragen von Menschen annehmen, die du im echten Leben kennst',
                   'Denke daran: Menschen online sind moeglicherweise nicht, wer sie vorgeben zu sein',
-                  'Wenn jemand dich unwohl fuehlen laesst, blockiere ihn sofort',
-                  'Vertraue deinem Bauchgefuehl - wenn etwas falsch erscheint, ist es wahrscheinlich falsch'
+                  'Wenn jemand dich unwohl fühlen lässt, blockiere ihn sofort',
+                  'Vertraue deinem Bauchgefühl - wenn etwas falsch erscheint, ist es wahrscheinlich falsch'
                 ],
                 details: 'Im Internet kann jeder behaupten, wer er will. Ein Erwachsener kann sich als Gleichaltriger ausgeben. Wenn jemand zu schnell persoenlich wird, zu viele Komplimente macht oder nach Geheimnissen fragt, ist das ein Warnsignal.'
               },
               { 
                 icon: 'I', 
-                title: 'Auf dein Bauchgefuehl hoeren', 
+                title: 'Auf dein Bauchgefühl hören',
                 tips: [
-                  'Wenn sich etwas falsch anfuehlt, ist es wahrscheinlich falsch',
+                  'Wenn sich etwas falsch anfühlt, ist es wahrscheinlich falsch',
                   'Du schuldest niemandem deine Zeit oder Aufmerksamkeit online',
                   'Es ist in Ordnung, "Nein" zu sagen oder aufzuhören, mit jemandem zu sprechen',
-                  'Wenn du dich unwohl fuehlst, teile es einer vertrauenswuerdigen Person mit'
+                  'Wenn du dich unwohl fühlst, teile es einer vertrauenswürdigen Person mit'
                 ],
-                details: 'Dein Bauchgefuehl ist ein wichtiger Schutzmechanismus. Wenn eine Situation oder eine Person dich beunruhigt, gibt es meist einen guten Grund dafuer. Hoere auf diese Gefuehle und handle entsprechend.'
+                details: 'Dein Bauchgefühl ist ein wichtiger Schutzmechanismus. Wenn eine Situation oder eine Person dich beunruhigt, gibt es meist einen guten Grund dafür. Höre auf diese Gefühle und handle entsprechend.'
               },
               { 
                 icon: 'T', 
-                title: 'Mit vertrauenswuerdigen Erwachsenen sprechen', 
+                title: 'Mit vertrauenswürdigen Erwachsenen sprechen',
                 tips: [
-                  'Sage einem Elternteil, Lehrer oder vertrauenswuerdigen Erwachsenen, wenn jemand dich unwohl fuehlen laesst',
-                  'Halte keine Geheimnisse vor deinen Eltern ueber Online-Freunde',
+                  'Sage einem Elternteil, Lehrer oder vertrauenswürdigen Erwachsenen, wenn jemand dich unwohl fühlen lässt',
+                  'Halte keine Geheimnisse vor deinen Eltern über Online-Freunde',
                   'Bitte um Hilfe, wenn du dir bei etwas unsicher bist',
                   'Erinnere dich: Echte Freunde bitten dich nicht, Dinge vor deinen Eltern geheim zu halten'
                 ],
-                details: 'Vertrauenswuerdige Erwachsene sind da, um dir zu helfen. Wenn jemand versucht, dich davon abzuhalten, mit ihnen zu sprechen, ist das ein klares Warnsignal. Echte Freunde haben nichts zu verbergen.'
+                details: 'Vertrauenswürdige Erwachsene sind da, um dir zu helfen. Wenn jemand versucht, dich davon abzuhalten, mit ihnen zu sprechen, ist das ein klares Warnsignal. Echte Freunde haben nichts zu verbergen.'
               },
               { 
                 icon: 'F', 
@@ -90,7 +90,7 @@ export const Protection: React.FC = () => {
                   'Niemals Fotos von dir an Menschen senden, die du nicht gut kennst',
                   'Teile keine Fotos, die deinen Koerper oder dein Gesicht unangemessen zeigen',
                   'Denke daran: Sobald du ein Foto gesendet hast, kannst du nicht kontrollieren, wer es sieht',
-                  'Fotos koennen zur Erpressung genutzt werden'
+                  'Fotos können zur Erpressung genutzt werden'
                 ],
                 details: 'Fotos sind wie ein Geschenk, das du nicht zuruecknehmen kannst. Sobald sie gesendet sind, gehoeren sie nicht mehr dir. Groomer nutzen Fotos oft zur Erpressung oder um sie weiterzuverbreiten.'
               },
@@ -103,7 +103,7 @@ export const Protection: React.FC = () => {
                   'Echte Freunde werden verstehen, wenn du einen Elternteil mitbringen moechtest',
                   'Wenn jemand Druck macht, sich allein zu treffen, ist das ein Warnsignal'
                 ],
-                details: 'Persoenliche Treffen mit Online-Bekanntschaften sind extrem gefaehrlich. Die Person koennte jemand ganz anderes sein, als sie vorgibt zu sein. Immer einen Erwachsenen mitbringen oder das Treffen ganz ablehnen.'
+                details: 'Persönliche Treffen mit Online-Bekanntschaften sind extrem gefährlich. Die Person könnte jemand ganz anderes sein, als sie vorgibt zu sein. Immer einen Erwachsenen mitbringen oder das Treffen ganz ablehnen.'
               }
             ].map((item, index) => (
               <Card key={index} className="bg-white hover:shadow-xl transition-shadow">
@@ -129,9 +129,9 @@ export const Protection: React.FC = () => {
       {/* For Parents - Expanded */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center text-[#1A1A1A]">Fuer Eltern & Erziehungsberechtigte</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center text-[#1A1A1A]">Für Eltern & Erziehungsberechtigte</h2>
           <p className="text-lg text-center text-[#6B6B6B] mb-12 leading-relaxed max-w-3xl mx-auto">
-            Als Eltern koennen Sie Ihre Kinder aktiv schuetzen, indem Sie offen kommunizieren, Grenzen setzen und aufmerksam bleiben.
+            Als Eltern können Sie Ihre Kinder aktiv schützen, indem Sie offen kommunizieren, Grenzen setzen und aufmerksam bleiben.
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
@@ -139,8 +139,8 @@ export const Protection: React.FC = () => {
               { 
                 icon: 'K', 
                 title: 'Offene Kommunikation', 
-                desc: 'Fuehren Sie regelmaessige, offene Gespraeche mit Ihrem Kind ueber seine Online-Aktivitaeten.',
-                details: 'Sprechen Sie regelmaessig und ohne Urteil ueber das, was Ihr Kind online erlebt. Fragen Sie nach neuen Freunden, interessanten Apps oder unangenehmen Erfahrungen. Schaffen Sie eine Atmosphaere, in der Ihr Kind sich sicher fuehlt, ueber alles zu sprechen.',
+                desc: 'Führen Sie regelmäßige, offene Gespräche mit Ihrem Kind über seine Online-Aktivitäten.',
+                details: 'Sprechen Sie regelmäßig und ohne Urteil über das, was Ihr Kind online erlebt. Fragen Sie nach neuen Freunden, interessanten Apps oder unangenehmen Erfahrungen. Schaffen Sie eine Atmosphäre, in der Ihr Kind sich sicher fühlt, über alles zu sprechen.',
                 tips: [
                   'Waehlen Sie einen ruhigen Moment fuer Gespraeche',
                   'Hoeren Sie zu, ohne sofort zu urteilen',
@@ -150,38 +150,38 @@ export const Protection: React.FC = () => {
               },
               { 
                 icon: 'Ü', 
-                title: 'Aktivitaeten ueberwachen', 
+                title: 'Aktivitäten überwachen',
                 desc: 'Wissen Sie, welche Plattformen Ihr Kind nutzt, mit wem es spricht und was es online tut.',
-                details: 'Ueberwachung bedeutet nicht Spionage, sondern verantwortungsvolle Begleitung. Seien Sie sich bewusst, welche Apps Ihr Kind nutzt, welche Spiele es spielt und mit wem es kommuniziert. Nutzen Sie Kinderschutz-Apps und Einstellungen.',
+                details: 'Überwachung bedeutet nicht Spionage, sondern verantwortungsvolle Begleitung. Seien Sie sich bewusst, welche Apps Ihr Kind nutzt, welche Spiele es spielt und mit wem es kommuniziert. Nutzen Sie Kinderschutz-Apps und Einstellungen.',
                 tips: [
                   'Lernen Sie die Apps kennen, die Ihr Kind nutzt',
-                  'Nutzen Sie Kinderschutz-Einstellungen auf Geraeten',
-                  'Ueberpruefen Sie regelmaessig die Freundeslisten',
+                  'Nutzen Sie Kinderschutz-Einstellungen auf Geräten',
+                  'Überprüfen Sie regelmäßig die Freundeslisten',
                   'Seien Sie bei der Installation neuer Apps dabei'
                 ]
               },
               { 
                 icon: 'B', 
                 title: 'Gemeinsam bilden', 
-                desc: 'Lernen Sie gemeinsam ueber Online-Sicherheit. Zeigen Sie Ihrem Kind, wie man Datenschutzeinstellungen nutzt.',
-                details: 'Bilden Sie sich gemeinsam weiter. Zeigen Sie Ihrem Kind, wie man Datenschutzeinstellungen anpasst, wie man verdaechtige Profile erkennt und wie man sich sicher online verhaelt. Machen Sie es zu einer gemeinsamen Lernerfahrung.',
+                desc: 'Lernen Sie gemeinsam über Online-Sicherheit. Zeigen Sie Ihrem Kind, wie man Datenschutzeinstellungen nutzt.',
+                details: 'Bilden Sie sich gemeinsam weiter. Zeigen Sie Ihrem Kind, wie man Datenschutzeinstellungen anpasst, wie man verdächtige Profile erkennt und wie man sich sicher online verhaelt. Machen Sie es zu einer gemeinsamen Lernerfahrung.',
                 tips: [
                   'Gehen Sie gemeinsam durch die Datenschutzeinstellungen',
                   'Erklaeren Sie, warum bestimmte Einstellungen wichtig sind',
-                  'Ueben Sie gemeinsam, wie man verdaechtige Profile erkennt',
+                  'Üben Sie gemeinsam, wie man verdächtige Profile erkennt',
                   'Nutzen Sie Lernressourcen wie diese Website gemeinsam'
                 ]
               },
               { 
                 icon: 'R', 
                 title: 'Grenzen setzen', 
-                desc: 'Etablieren Sie klare Regeln ueber Bildschirmzeit, welche Apps erlaubt sind und wann Geraete genutzt werden koennen.',
+                desc: 'Etablieren Sie klare Regeln über Bildschirmzeit, welche Apps erlaubt sind und wann Geräte genutzt werden können.',
                 details: 'Klare Regeln geben Kindern Sicherheit und Struktur. Legen Sie gemeinsam fest, welche Apps erlaubt sind, wie lange das Geraet genutzt werden darf und wo es genutzt werden kann. Regeln sollten altersgerecht und gemeinsam besprochen sein.',
                 tips: [
                   'Erstellen Sie einen Familienvertrag fuer Online-Nutzung',
                   'Setzen Sie Zeitlimits fuer verschiedene Aktivitaeten',
                   'Bestimmen Sie "bildschirmfreie" Zeiten (z.B. beim Essen)',
-                  'Ueberpruefen und passen Sie Regeln regelmaessig an'
+                  'Überprüfen und passen Sie Regeln regelmäßig an'
                 ]
               },
               { 
@@ -200,7 +200,7 @@ export const Protection: React.FC = () => {
                 icon: 'V', 
                 title: 'Auf Veraenderungen achten', 
                 desc: 'Seien Sie aufmerksam auf Veraenderungen im Verhalten, der Stimmung oder den Online-Gewohnheiten Ihres Kindes.',
-                details: 'Veraenderungen im Verhalten koennen ein Warnsignal sein. Achten Sie auf Rueckzug, Stimmungsschwankungen, ploetzliche Geheimhaltung oder Veraenderungen in den Online-Gewohnheiten. Diese koennen auf Probleme hinweisen.',
+                details: 'Veränderungen im Verhalten können ein Warnsignal sein. Achten Sie auf Rückzug, Stimmungsschwankungen, plötzliche Geheimhaltung oder Veränderungen in den Online-Gewohnheiten. Diese können auf Probleme hinweisen.',
                 tips: [
                   'Beobachten Sie Veraenderungen in der Stimmung',
                   'Achten Sie auf Rueckzug oder Geheimhaltung',
@@ -240,7 +240,7 @@ export const Protection: React.FC = () => {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center text-[#1A1A1A]">Gespraechstipps mit Kindern</h2>
             <p className="text-lg text-center text-[#6B6B6B] mb-10 leading-relaxed">
-              Wie Sie mit Ihrem Kind ueber Online-Sicherheit sprechen koennen
+              Wie Sie mit Ihrem Kind über Online-Sicherheit sprechen können
             </p>
             
             <div className="space-y-6">
@@ -259,7 +259,7 @@ export const Protection: React.FC = () => {
                 <h3 className="text-xl font-bold mb-4 text-[#1A1A1A]">2. Verwenden Sie altersgerechte Sprache</h3>
                 <p className="text-[#6B6B6B] mb-4 leading-relaxed">
                   Passen Sie Ihre Sprache an das Alter Ihres Kindes an. Erklaren Sie Gefahren auf eine Weise, die das Kind versteht,
-                  ohne es zu aengstigen. Verwenden Sie Beispiele aus dem Alltag des Kindes.
+                  ohne es zu ängstigen. Verwenden Sie Beispiele aus dem Alltag des Kindes.
                 </p>
                 <p className="text-sm text-[#6B6B6B] italic">
                   Beispiel: "Manchmal geben sich Erwachsene im Internet als Kinder aus, um Freunde zu finden. Das ist nicht in Ordnung."
@@ -283,7 +283,7 @@ export const Protection: React.FC = () => {
                   wenn jemand unangemessen ist, und dass Hilfe suchen ein Zeichen von Staerke ist.
                 </p>
                 <p className="text-sm text-[#6B6B6B] italic">
-                  Beispiel: "Wenn jemand dich unwohl fuehlen laesst, ist das nicht deine Schuld. Komm immer zu mir, ich helfe dir."
+                  Beispiel: "Wenn jemand dich unwohl fühlen lässt, ist das nicht deine Schuld. Komm immer zu mir, ich helfe dir."
                 </p>
               </Card>
             </div>
@@ -305,11 +305,11 @@ export const Protection: React.FC = () => {
                   {[
                     'Offene und regelmaessige Gespraeche fuehren',
                     'Interesse an den Online-Aktivitaeten zeigen',
-                    'Gemeinsam Datenschutzeinstellungen ueberpruefen',
+                    'Gemeinsam Datenschutzeinstellungen überprüfen',
                     'Klare, altersgerechte Regeln aufstellen',
                     'Vertrauen aufbauen durch Verstaendnis',
                     'Ihr Kind ermutigen, bei Problemen zu Ihnen zu kommen',
-                    'Gemeinsam ueber Online-Sicherheit lernen',
+                    'Gemeinsam über Online-Sicherheit lernen',
                     'Auf Veraenderungen im Verhalten achten',
                     'Positive Online-Erfahrungen wertschaetzen',
                     'Als Vorbild fungieren bei der eigenen Online-Nutzung'
@@ -328,7 +328,7 @@ export const Protection: React.FC = () => {
                 <ul className="space-y-3">
                   {[
                     'Internet komplett verbieten (fuehrt zu Geheimhaltung)',
-                    'Ueberreagieren oder bestrafen, wenn Probleme auftreten',
+                    'Überreagieren oder bestrafen, wenn Probleme auftreten',
                     'Spionieren ohne Wissen des Kindes',
                     'Gespraeche vermeiden oder aufschieben',
                     'Technische Loesungen als einzigen Schutz sehen',
@@ -362,12 +362,12 @@ export const Protection: React.FC = () => {
                   'Keine Freundschaftsanfragen von Fremden annehmen',
                   'Alle Social-Media-Konten privat halten',
                   'Niemals Fotos an Menschen senden, die du nicht kennst',
-                  'Keine Geheimnisse vor Eltern ueber Online-Freunde halten',
+                  'Keine Geheimnisse vor Eltern über Online-Freunde halten',
                   'Niemals jemanden persoenlich treffen, den du nur online kennst',
-                  'Jeden blockieren und melden, der dich unwohl fuehlen laesst',
-                  'Einer vertrauenswuerdigen Person Bescheid geben, wenn sich etwas falsch anfuehlt',
-                  'Auf dein Bauchgefuehl hoeren',
-                  'Regelmaessig Datenschutzeinstellungen ueberpruefen',
+                  'Jeden blockieren und melden, der dich unwohl fühlen lässt',
+                  'Einer vertrauenswürdigen Person Bescheid geben, wenn sich etwas falsch anfühlt',
+                  'Auf dein Bauchgefühl hören',
+                  'Regelmäßig Datenschutzeinstellungen überprüfen',
                   'Niemals Passwoerter mit anderen teilen',
                   'Vorsichtig sein bei Geschenken oder besonderen Angeboten'
                 ].map((rule, index) => (

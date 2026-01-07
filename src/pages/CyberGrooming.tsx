@@ -86,12 +86,12 @@ export const CyberGrooming: React.FC = () => {
               <div className="bg-[#F5F1EB] rounded-3xl p-8">
                 <h3 className="text-2xl font-bold mb-4 text-[#1A1A1A]">In einfachen Worten</h3>
                 <p className="text-lg md:text-xl text-[#6B6B6B] mb-4 leading-relaxed">
-                  Cyber-Grooming ist ein gezielter Prozess, bei dem ein Erwachsener versucht, das Vertraün eines Kindes oder Jugendlichen im Internet zu gewinnen.
-                  Das Ziel ist es, eine emotionale Bindung aufzubaün, um das Kind später auszubeuten, zu missbrauchen oder zu schädigen.
+                  Cyber-Grooming ist ein gezielter Prozess, bei dem ein Erwachsener versucht, das Vertrauen eines Kindes oder Jugendlichen im Internet zu gewinnen.
+                  Das Ziel ist es, eine emotionale Bindung aufzubauen, um das Kind später auszubeuten, zu missbrauchen oder zu schädigen.
                 </p>
                 <p className="text-lg md:text-xl text-[#6B6B6B] leading-relaxed">
                   Der Begriff "Grooming" kommt aus dem Englischen und bedeutet "vorbereiten" oder "pflegen".
-                  Groomer "pflegen" eine Beziehung, die auf Manipulation und Täuschnung basiert, nicht auf echter Freundschaft.
+                  Groomer "pflegen" eine Beziehung, die auf Manipulation und Täuschung basiert, nicht auf echter Freundschaft.
                 </p>
               </div>
 
@@ -104,7 +104,7 @@ export const CyberGrooming: React.FC = () => {
                 </p>
                 <p className="text-lg text-[#6B6B6B] leading-relaxed">
                   Der Prozess läuft meist über mehrere Wochen oder sogar Monate. Groomer geben sich oft als Gleichaltrige aus,
-                  zeigen Interesse an den Hobbys und Problemen des Kindes und baün langsam Vertraün auf.
+                  zeigen Interesse an den Hobbys und Problemen des Kindes und bauen langsam Vertrauen auf.
                   Sie nutzen die Anonymität des Internets, um ihre wahre Identität zu verbergen.
                 </p>
               </div>
@@ -146,29 +146,29 @@ export const CyberGrooming: React.FC = () => {
                 },
                 { 
                   step: 2, 
-                  title: 'Vertraün aufbaün', 
-                  desc: 'Er investiert Zeit, um eine Beziehung aufzubaün, zeigt Interesse am Leben des Kindes und bietet Unterstützung an.',
-                  details: 'Ueber Tage oder Wochen hinweg baut der Groomer eine scheinbar normale Freundschaft auf. Er fragt nach Hobbys, Problemen in der Schule oder mit Freunden. Er hört zu, gibt Ratschläg und zeigt Verständnis. Diese Phase kann sehr lange daürn, bis das Kind dem Groomer voll vertraut.',
+                  title: 'Vertrauen aufbauen', 
+                  desc: 'Er investiert Zeit, um eine Beziehung aufzubauen, zeigt Interesse am Leben des Kindes und bietet Unterstützung an.',
+                  details: 'Über Tage oder Wochen hinweg baut der Groomer eine scheinbar normale Freundschaft auf. Er fragt nach Hobbys, Problemen in der Schule oder mit Freunden. Er hört zu, gibt Ratschläge und zeigt Verständnis. Diese Phase kann sehr lange dauern, bis das Kind dem Groomer voll vertraut.',
                   example: 'Beispiel: "Ich verstehe dich so gut. Meine Eltern verstehen mich auch nicht. Du kannst mir immer alles erzählen."'
                 },
                 { 
                   step: 3, 
                   title: 'Isolation', 
                   desc: 'Der Groomer versucht, das Kind von Familie und Freunden zu isolieren, oft durch das Schaffen von Konflikten.',
-                  details: 'Sobald Vertraün aufgebaut ist, beginnt der Groomer, das Kind von seinem Unterstützungssystem zu trennen. Er kritisiert Eltern, Lehrer oder Freunde und suggeriert, dass nur er das Kind wirklich versteht. Er schafft Geheimnisse, die nur zwischen ihnen beiden bestehen sollen.',
+                  details: 'Sobald Vertrauen aufgebaut ist, beginnt der Groomer, das Kind von seinem Unterstützungssystem zu trennen. Er kritisiert Eltern, Lehrer oder Freunde und suggeriert, dass nur er das Kind wirklich versteht. Er schafft Geheimnisse, die nur zwischen ihnen beiden bestehen sollen.',
                   example: 'Beispiel: "Deine Eltern würden das nie verstehen. Wir sollten das lieber geheim halten. Ich bin der Einzige, der dich wirklich versteht."'
                 },
                 { 
                   step: 4, 
                   title: 'Desensibilisierung', 
-                  desc: 'Er führt schrittweise sexülle Inhalte, unangemessene Themen oder Anfragen nach Fotos ein.',
+                  desc: 'Er führt schrittweise sexuelle Inhalte, unangemessene Themen oder Anfragen nach Fotos ein.',
                   details: 'Jetzt beginnt der Groomer, Grenzen zu testen und zu überschreiten. Zunächst mit "harmlosen" Fragen oder Witzen, dann mit immer expliziteren Inhalten. Er normalisiert unangemessene Gespräche und bittet um Fotos, zunächst normale, dann immer persönlichere.',
                   example: 'Beispiel: "Kannst du mir ein Foto schicken? Nur um zu sehen, wie du aussiehst. Es bleibt unter uns."'
                 },
                 { 
                   step: 5, 
                   title: 'Ausbeutung', 
-                  desc: 'Sobald Vertraün etabliert ist, kann der Groomer explizite Fotos anfordern, Treffen arrangieren oder andere Formen der Ausbeutung betreiben.',
+                  desc: 'Sobald Vertrauen etabliert ist, kann der Groomer explizite Fotos anfordern, Treffen arrangieren oder andere Formen der Ausbeutung betreiben.',
                   details: 'In der finalen Phase nutzt der Groomer die emotionale Abhängigkeit aus. Er erpresst das Kind mit bereits geteilten Informationen oder Fotos, droht mit Blossstellung oder fordert persönliche Treffen. Oft nutzt er Schuldgefühle: "Ich habe dir so viel geholfen, jetzt musst du auch etwas für mich tun."',
                   example: 'Beispiel: "Wenn du mich wirklich magst, würdest du [unangemessene Forderung]. Sonst war unsere ganze Freundschaft umsonst."'
                 }
@@ -208,7 +208,7 @@ export const CyberGrooming: React.FC = () => {
               <Card className="bg-[#F5F1EB]">
                 <h3 className="text-xl font-bold mb-4 text-[#1A1A1A]">Beispiel 1: Gaming-Plattform</h3>
                 <p className="text-[#6B6B6B] mb-4 leading-relaxed">
-                  Ein 13-jähriger Junge spielt regelmässig ein Online-Spiel. Ein neür Mitspieler, der vorgibt, 14 zu sein,
+                  Ein 13-jähriger Junge spielt regelmässig ein Online-Spiel. Ein neuer Mitspieler, der vorgibt, 14 zu sein,
                   schlägt vor, gemeinsam zu spielen. Nach einigen Wochen des gemeinsamen Spielens fragt der Mitspieler nach
                   dem echten Namen, der Schule und ob sie sich persönlich treffen könnten.
                 </p>
@@ -226,7 +226,7 @@ export const CyberGrooming: React.FC = () => {
                   Sie bittet um mehr persönliche Fotos "für das Portfolio" und schlägt vor, die Kommunikation geheim zu halten.
                 </p>
                 <p className="text-[#6B6B6B] leading-relaxed">
-                  <strong className="text-[#1A1A1A]">Warnzeichen:</strong> Uebermässige Komplimente, Angebot von "Karrierechancen",
+                  <strong className="text-[#1A1A1A]">Warnzeichen:</strong> Übermässige Komplimente, Angebot von "Karrierechancen",
                   Bitte um Geheimhaltung, Anfrage nach persönlichen Fotos.
                 </p>
               </Card>
@@ -260,7 +260,7 @@ export const CyberGrooming: React.FC = () => {
                   <span className="text-3xl font-bold text-[#1D4ED8]">1:5</span>
                 </div>
                 <h3 className="text-lg font-bold mb-2 text-[#1A1A1A]">Betroffene Kinder</h3>
-                <p className="text-[#6B6B6B]">Etwa jedes fünfte Kind erhält unerwünschte sexülle Annäherungsversuche online</p>
+                <p className="text-[#6B6B6B]">Etwa jedes fünfte Kind erhält unerwünschte sexuelle Annäherungsversuche online</p>
               </Card>
               <Card className="text-center bg-white">
                 <div className="w-20 h-20 rounded-full bg-[#2DD4BF] bg-opacity-20 flex items-center justify-center mx-auto mb-4">

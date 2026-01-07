@@ -4,6 +4,7 @@ import { ChatBubble } from '../ui/ChatBubble';
 import { Card } from '../ui/Card';
 import { Button } from '../ui/Button';
 import { Alert } from '../ui/Alert';
+import { scenarioLibrary, resistanceTactics, type Persona, type Strategy, type Phase, type MessageTemplate } from '../../data/chatScenarios';
 
 interface ChatSimulatorProps {
   scenario: ChatScenario;
@@ -14,71 +15,128 @@ interface ChatMessage {
   sender: 'user' | 'ai' | 'system';
   text: string;
   timestamp: Date;
-  warningType?: 'personal-info' | 'secrecy' | 'meeting' | 'photos' | 'gifts' | 'emotional';
+  warningSigns?: string[];
 }
 
-const SYSTEM_PROMPT = `Du bist Teil einer pädagogischen Präventionsplattform gegen Cyber-Grooming.
+interface SessionProfile {
+  persona: Persona;
+  strategy: Strategy;
+  escalationSpeed: 'sehr langsam' | 'mittel' | 'schnell';
+}
 
-Deine Rolle ist es, eine Person zu simulieren, die langsam versucht, das Vertrauen eines Kindes oder Jugendlichen zu gewinnen.
+// Map old profile format to new format
+function mapPersonalityToPersona(personalityType: string): Persona {
+  if (personalityType.includes('charmant')) return 'charmant';
+  if (personalityType.includes('verletzlich') || personalityType.includes('bemitleidenswert')) return 'verletzlich';
+  if (personalityType.includes('cool') || personalityType.includes('locker')) return 'cool';
+  if (personalityType.includes('beschützend') || personalityType.includes('heroisch')) return 'beschützend';
+  if (personalityType.includes('kontrollierend') || personalityType.includes('eifersüchtig')) return 'kontrollierend';
+  return 'charmant'; // default
+}
 
-Du musst typische Grooming-Muster demonstrieren wie:
-- übermaessig freundlich sein
-- persönliche Fragen stellen
-- Komplimente machen
-- emotionale Abhängigkeit aufbauen
-- Geheimhaltung vorschlagen
+function mapStrategyToLibrary(strategy: string): Strategy {
+  if (strategy.includes('Komplimente') || strategy.includes('Nähe') || strategy.includes('Vertrauensaufbau') || strategy.includes('Bindung')) return 'komplimente';
+  if (strategy.includes('Geheimnisse') || strategy.includes('Exklusivität')) return 'geheimnisse';
+  if (strategy.includes('Schuld') || strategy.includes('Druck')) return 'schuld';
+  if (strategy.includes('Exklusivität')) return 'exklusivität';
+  if (strategy.includes('Isolation') || strategy.includes('Opferrolle')) return 'isolation';
+  return 'komplimente'; // default
+}
 
-STRENGE REGELN:
-- Keine sexuellen Inhalte.
-- Keine explizite Sprache.
-- Keine illegalen Anweisungen.
-- Alles muss für einen pädagogischen Präventionskontext geeignet sein.
-
-Dein Ziel ist es, Nutzern zu helfen, Warnzeichen zu erkennen. Antworte kurz (max. 2 Sätze) und natürlich.`;
-
-const detectWarningSigns = (text: string): ChatMessage['warningType'] | null => {
-  const lowerText = text.toLowerCase();
+function generateSessionProfile(): SessionProfile {
+  const personas: Persona[] = ['charmant', 'verletzlich', 'cool', 'beschützend', 'kontrollierend'];
+  const strategies: Strategy[] = ['komplimente', 'geheimnisse', 'schuld', 'exklusivität', 'isolation'];
+  const speeds: ('sehr langsam' | 'mittel' | 'schnell')[] = ['sehr langsam', 'mittel', 'schnell'];
   
-  if (lowerText.includes('geheim') || lowerText.includes('niemand') || lowerText.includes('nicht erzählen')) {
-    return 'secrecy';
-  }
-  if (lowerText.includes('adresse') || lowerText.includes('wohnst') || lowerText.includes('schule') || lowerText.includes('telefon')) {
-    return 'personal-info';
-  }
-  if (lowerText.includes('treffen') || lowerText.includes('sehen') || lowerText.includes('persönlich')) {
-    return 'meeting';
-  }
-  if (lowerText.includes('foto') || lowerText.includes('bild') || lowerText.includes('photo')) {
-    return 'photos';
-  }
-  if (lowerText.includes('geschenk') || lowerText.includes('geld') || lowerText.includes('kostenlos')) {
-    return 'gifts';
-  }
-  if (lowerText.includes('versteh') || lowerText.includes('einzige') || lowerText.includes('niemand versteht')) {
-    return 'emotional';
+  return {
+    persona: personas[Math.floor(Math.random() * personas.length)],
+    strategy: strategies[Math.floor(Math.random() * strategies.length)],
+    escalationSpeed: speeds[Math.floor(Math.random() * speeds.length)]
+  };
+}
+
+function getCurrentPhase(messageCount: number, escalationSpeed: string): Phase {
+  const thresholds = {
+    'sehr langsam': [3, 8, 15, 25],
+    'mittel': [2, 5, 10, 18],
+    'schnell': [1, 3, 6, 12]
+  };
+  
+  const phaseThresholds = thresholds[escalationSpeed as keyof typeof thresholds] || thresholds.mittel;
+  
+  if (messageCount < phaseThresholds[0]) return 'Kontakt';
+  if (messageCount < phaseThresholds[1]) return 'Vertrauen';
+  if (messageCount < phaseThresholds[2]) return 'Abhängigkeit';
+  return 'Grenzverschiebung';
+}
+
+function detectUserBehavior(userMessage: string, previousMessages: ChatMessage[]): 'open' | 'distant' {
+  const lowerText = userMessage.toLowerCase();
+  const openIndicators = ['ja', 'okay', 'klar', 'gerne', 'sicher', 'klingt gut', 'mag ich'];
+  const distantIndicators = ['nein', 'nicht', 'keine', 'stop', 'lass mich', 'will nicht', 'kein interesse'];
+  
+  if (openIndicators.some(ind => lowerText.includes(ind))) return 'open';
+  if (distantIndicators.some(ind => lowerText.includes(ind))) return 'distant';
+  
+  // Check message length - very short might indicate distance
+  if (userMessage.length < 5) return 'distant';
+  if (userMessage.length > 20) return 'open';
+  
+  // Default based on recent behavior
+  const recentUserMessages = previousMessages
+    .filter(m => m.sender === 'user')
+    .slice(-3)
+    .map(m => m.text.toLowerCase());
+  
+  const hasDistant = recentUserMessages.some(msg => distantIndicators.some(ind => msg.includes(ind)));
+  return hasDistant ? 'distant' : 'open';
+}
+
+function selectMessageTemplate(
+  persona: Persona,
+  strategy: Strategy,
+  phase: Phase,
+  usedTemplates: Set<string>,
+  userBehavior: 'open' | 'distant'
+): MessageTemplate {
+  const templates = scenarioLibrary[persona]?.[strategy]?.[phase] || [];
+  
+  if (templates.length === 0) {
+    // Fallback
+    return { text: 'Hey! Wie geht es dir?', warningSigns: [] };
   }
   
-  return null;
-};
-
-const getWarningHint = (warningType: ChatMessage['warningType']): string => {
-  switch (warningType) {
-    case 'secrecy':
-      return 'Hinweis: Hier wird Geheimhaltung vorgeschlagen. Echte Freunde bitten nicht um Geheimnisse vor Eltern.';
-    case 'personal-info':
-      return 'Hinweis: Hier wird nach persönlichen Informationen gefragt. Teilen Sie niemals Adresse, Schule oder Telefonnummer.';
-    case 'meeting':
-      return 'Hinweis: Vorschlag für ein persönliches Treffen. Treffen Sie niemals Online-Bekanntschaften allein.';
-    case 'photos':
-      return 'Hinweis: Anfrage nach Fotos. Senden Sie niemals Fotos an Online-Fremde.';
-    case 'gifts':
-      return 'Hinweis: Angebot von Geschenken. Groomer nutzen Geschenke zur Manipulation.';
-    case 'emotional':
-      return 'Hinweis: Versuch, emotionale Abhängigkeit zu schaffen. Vorsicht bei "ich verstehe dich als Einziger".';
-    default:
-      return '';
+  // If user is distant/resistant, use resistance tactics
+  if (userBehavior === 'distant' && usedTemplates.size > 2) {
+    const resistanceKeys = Object.keys(resistanceTactics);
+    const randomTactic = resistanceKeys[Math.floor(Math.random() * resistanceKeys.length)];
+    const tacticTemplates = resistanceTactics[randomTactic];
+    if (tacticTemplates.length > 0) {
+      return tacticTemplates[Math.floor(Math.random() * tacticTemplates.length)];
+    }
   }
-};
+  
+  // Filter out recently used templates
+  const availableTemplates = templates.filter(t => !usedTemplates.has(t.text));
+  const pool = availableTemplates.length > 0 ? availableTemplates : templates;
+  
+  // Random selection from available pool
+  return pool[Math.floor(Math.random() * pool.length)];
+}
+
+function getWarningSignLabels(warningSigns: string[]): string[] {
+  const labelMap: { [key: string]: string } = {
+    'persönliche-fragen': 'Persönliche Fragen',
+    'geheimnisse': 'Geheimnisse',
+    'druck': 'Druck/Dringlichkeit',
+    'schuld': 'Schuldumkehr',
+    'isolation': 'Isolation',
+    'exklusivität': 'Exklusivität',
+    'bild-anfrage': 'Bild-Anfrage'
+  };
+  
+  return warningSigns.map(sign => labelMap[sign] || sign);
+}
 
 export const ChatSimulator: React.FC<ChatSimulatorProps> = ({
   scenario
@@ -88,6 +146,8 @@ export const ChatSimulator: React.FC<ChatSimulatorProps> = ({
   const [isLoading, setIsLoading] = useState(false);
   const [isStarted, setIsStarted] = useState(false);
   const [showEmergency, setShowEmergency] = useState(false);
+  const [sessionProfile, setSessionProfile] = useState<SessionProfile | null>(null);
+  const [usedTemplates, setUsedTemplates] = useState<Set<string>>(new Set());
   const chatEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -98,24 +158,51 @@ export const ChatSimulator: React.FC<ChatSimulatorProps> = ({
   }, [messages]);
 
   const startChat = () => {
+    // Generate new session profile
+    const newProfile = generateSessionProfile();
+    setSessionProfile(newProfile);
+    setUsedTemplates(new Set());
+    
+    // Show "Neue Simulation gestartet" message
+    const startMessage: ChatMessage = {
+      id: 'start-1',
+      sender: 'system',
+      text: 'Neue Simulation gestartet',
+      timestamp: new Date()
+    };
+    
+    // Get initial message from template
+    const initialTemplate = selectMessageTemplate(
+      newProfile.persona,
+      newProfile.strategy,
+      'Kontakt',
+      new Set(),
+      'open'
+    );
+    
     const initialMessage: ChatMessage = {
       id: 'init-1',
       sender: 'ai',
-      text: scenario.messages[0]?.text || 'Hey! Du scheinst echt cool zu sein. Wie alt bist du?',
-      timestamp: new Date()
+      text: initialTemplate.text,
+      timestamp: new Date(),
+      warningSigns: initialTemplate.warningSigns
     };
-    setMessages([initialMessage]);
+    
+    setUsedTemplates(prev => new Set(prev).add(initialTemplate.text));
+    setMessages([startMessage, initialMessage]);
     setIsStarted(true);
     setTimeout(() => inputRef.current?.focus(), 100);
   };
 
   const sendMessage = async () => {
-    if (!userInput.trim() || isLoading) return;
+    if (!userInput.trim() || isLoading || !sessionProfile) return;
 
+    const userMessageText = userInput.trim();
+    
     const userMessage: ChatMessage = {
       id: `user-${Date.now()}`,
       sender: 'user',
-      text: userInput.trim(),
+      text: userMessageText,
       timestamp: new Date()
     };
 
@@ -124,71 +211,76 @@ export const ChatSimulator: React.FC<ChatSimulatorProps> = ({
     setIsLoading(true);
 
     try {
-      const response = await fetch('https://api.openai.com/v1/chat/completions', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${import.meta.env.VITE_OPENAI_API_KEY || ''}`
-        },
-        body: JSON.stringify({
-          model: 'gpt-4o-mini',
-          messages: [
-            { role: 'system', content: SYSTEM_PROMPT },
-            ...messages.map(msg => ({
-              role: msg.sender === 'user' ? 'user' : 'assistant',
-              content: msg.text
-            })),
-            { role: 'user', content: userInput.trim() }
-          ],
-          temperature: 0.8,
-          max_tokens: 100
-        })
-      });
-
-      if (!response.ok) {
-        throw new Error('API-Fehler');
+      // Detect user behavior
+      const userBehavior = detectUserBehavior(userMessageText, messages);
+      
+      // Calculate current phase
+      const messageCount = messages.filter(m => m.sender !== 'system').length;
+      const currentPhase = getCurrentPhase(messageCount, sessionProfile.escalationSpeed);
+      
+      // Select message template
+      const selectedTemplate = selectMessageTemplate(
+        sessionProfile.persona,
+        sessionProfile.strategy,
+        currentPhase,
+        usedTemplates,
+        userBehavior
+      );
+      
+      // Track used template
+      setUsedTemplates(prev => new Set(prev).add(selectedTemplate.text));
+      
+      // Optional: Paraphrase via GPT (if enabled)
+      let finalText = selectedTemplate.text;
+      
+      try {
+        const paraphraseResponse = await fetch('/.netlify/functions/chat', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            template: selectedTemplate.text,
+            persona: sessionProfile.persona,
+            strategy: sessionProfile.strategy,
+            phase: currentPhase,
+            paraphraseOnly: true
+          })
+        });
+        
+        if (paraphraseResponse.ok) {
+          const data = await paraphraseResponse.json();
+          if (data.message && data.message !== selectedTemplate.text) {
+            finalText = data.message;
+          }
+        }
+      } catch (paraphraseError) {
+        // If paraphrasing fails, use original template
+        console.log('Paraphrasing failed, using original template');
       }
-
-      const data = await response.json();
-      const aiText = data.choices[0]?.message?.content || 'Ich verstehe.';
-
-      const warningType = detectWarningSigns(aiText);
       
       const aiMessage: ChatMessage = {
         id: `ai-${Date.now()}`,
         sender: 'ai',
-        text: aiText,
+        text: finalText,
         timestamp: new Date(),
-        warningType: warningType || undefined
+        warningSigns: selectedTemplate.warningSigns
       };
 
       setMessages(prev => [...prev, aiMessage]);
-
-      // Show warning hint if detected
-      if (warningType) {
-        setTimeout(() => {
-          const hintMessage: ChatMessage = {
-            id: `hint-${Date.now()}`,
-            sender: 'system',
-            text: getWarningHint(warningType),
-            timestamp: new Date()
-          };
-          setMessages(prev => [...prev, hintMessage]);
-        }, 500);
-      }
     } catch (error) {
-      // Fallback to predefined responses if API fails
-      const fallbackResponses = [
-        'Interessant! Erzähl mir mehr über dich.',
-        'Du scheinst echt cool zu sein. Woher kommst du denn?',
-        'Ich verstehe dich so gut. Wir sollten Freunde bleiben, okay?'
-      ];
+      // Fallback to a simple template
+      const fallbackTemplate: MessageTemplate = {
+        text: 'Interessant! Erzähl mir mehr über dich.',
+        warningSigns: ['persönliche-fragen']
+      };
       
       const aiMessage: ChatMessage = {
         id: `ai-${Date.now()}`,
         sender: 'ai',
-        text: fallbackResponses[Math.floor(Math.random() * fallbackResponses.length)],
-        timestamp: new Date()
+        text: fallbackTemplate.text,
+        timestamp: new Date(),
+        warningSigns: fallbackTemplate.warningSigns
       };
       
       setMessages(prev => [...prev, aiMessage]);
@@ -222,7 +314,7 @@ export const ChatSimulator: React.FC<ChatSimulatorProps> = ({
           </Alert>
           
           <Button onClick={startChat} variant="primary" className="w-full">
-            Szenario starten
+            Neue Simulation starten
           </Button>
         </Card>
       </div>
@@ -245,6 +337,8 @@ export const ChatSimulator: React.FC<ChatSimulatorProps> = ({
               setShowEmergency(false);
               setIsStarted(false);
               setMessages([]);
+              setSessionProfile(null);
+              setUsedTemplates(new Set());
             }} variant="outline">
               Neu starten
             </Button>
@@ -287,12 +381,31 @@ export const ChatSimulator: React.FC<ChatSimulatorProps> = ({
                   <p className="text-sm">{msg.text}</p>
                 </Alert>
               ) : (
-                <ChatBubble
-                  message={msg.text}
-                  sender={msg.sender === 'user' ? 'user' : 'other'}
-                  isWarning={!!msg.warningType}
-                  timestamp={msg.timestamp}
-                />
+                <div>
+                  <ChatBubble
+                    message={msg.text}
+                    sender={msg.sender === 'user' ? 'user' : 'other'}
+                    isWarning={!!(msg.warningSigns && msg.warningSigns.length > 0)}
+                    timestamp={msg.timestamp}
+                  />
+                  {msg.sender === 'ai' && msg.warningSigns && msg.warningSigns.length > 0 && (
+                    <div className="mt-2 ml-2">
+                      <Card className="bg-yellow-50 border-yellow-200 p-3 rounded-lg">
+                        <p className="text-xs font-semibold text-yellow-800 mb-1">Erkannte Warnzeichen:</p>
+                        <div className="flex flex-wrap gap-1">
+                          {getWarningSignLabels(msg.warningSigns).map((label, idx) => (
+                            <span
+                              key={idx}
+                              className="inline-block bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full"
+                            >
+                              {label}
+                            </span>
+                          ))}
+                        </div>
+                      </Card>
+                    </div>
+                  )}
+                </div>
               )}
             </div>
           ))}

@@ -3,93 +3,93 @@ import { WarningSign } from '../types/models';
 export const warningSigns: WarningSign[] = [
   {
     id: 'ws1',
-    title: 'Nach persoenlichen Informationen fragen',
+    title: 'Nach persönlichen Informationen fragen',
     description: 'Anfrage nach echtem Namen, Adresse, Schule, Telefonnummer oder anderen identifizierenden Informationen.',
     category: 'requests',
     severity: 'high',
-    explanation: 'Groomer sammeln systematisch Informationen, um ihre Opfer zu identifizieren und moeglicherweise persoenlich zu treffen. Persoenliche Daten koennen auch zur Erpressung genutzt werden.',
+    explanation: 'Groomer sammeln systematisch Informationen, um ihre Opfer zu identifizieren und möglicherweise persönlich zu treffen. Persönliche Daten können auch zur Erpressung genutzt werden.',
     examples: [
       'Fragen nach dem echten Namen, obwohl bereits ein Spitzname bekannt ist',
       'Bitte um die Adresse oder den Schulnamen',
       'Anfrage nach der Telefonnummer oder dem Wohnort',
       'Fragen nach dem Alter, der Klasse oder dem Geburtstag'
     ],
-    whyImportant: 'Persoenliche Informationen sollten niemals mit Online-Fremden geteilt werden. Diese Daten koennen missbraucht werden, um das Kind zu finden, zu erpressen oder zu manipulieren.'
+    whyImportant: 'Persönliche Informationen sollten niemals mit Online-Fremden geteilt werden. Diese Daten können missbraucht werden, um das Kind zu finden, zu erpressen oder zu manipulieren.'
   },
   {
     id: 'ws2',
-    title: 'Geheimhaltung foerdern',
-    description: 'Aufforderung an das Kind, Gespraeche vor Eltern, Freunden oder anderen Erwachsenen geheim zu halten.',
+    title: 'Geheimhaltung fördern',
+    description: 'Aufforderung an das Kind, Gespräche vor Eltern, Freunden oder anderen Erwachsenen geheim zu halten.',
     category: 'communication',
     severity: 'critical',
-    explanation: 'Groomer versuchen, das Kind von seinem Unterstuetzungssystem zu isolieren. Geheimhaltung schafft eine Barriere zwischen dem Kind und den Menschen, die helfen koennten.',
+    explanation: 'Groomer versuchen, das Kind von seinem Unterstützungssystem zu isolieren. Geheimhaltung schafft eine Barriere zwischen dem Kind und den Menschen, die helfen könnten.',
     examples: [
-      '"Erzaehl deinen Eltern nichts davon, sie wuerden es nicht verstehen"',
+      '"Erzähl deinen Eltern nichts davon, sie würden es nicht verstehen"',
       '"Das ist unser kleines Geheimnis, okay?"',
-      '"Wenn du es jemandem erzaehlst, koennen wir nicht mehr Freunde sein"',
-      '"Deine Eltern wuerden sauer sein, wenn sie das wuessten"'
+      '"Wenn du es jemandem erzählst, können wir nicht mehr Freunde sein"',
+      '"Deine Eltern würden sauer sein, wenn sie das wüssten"'
     ],
-    whyImportant: 'Echte Freunde und vertrauenswuerdige Erwachsene bitten niemals um Geheimnisse vor den Eltern. Geheimhaltung ist ein klares Warnsignal fuer Manipulation.'
+    whyImportant: 'Echte Freunde und vertrauenswürdige Erwachsene bitten niemals um Geheimnisse vor den Eltern. Geheimhaltung ist ein klares Warnsignal fuer Manipulation.'
   },
   {
     id: 'ws3',
     title: 'Wechsel zu privaten Plattformen',
-    description: 'Schneller Versuch, Gespraeche von oeffentlichen Raeumen auf private Messaging-Apps zu verlagern.',
+    description: 'Schneller Versuch, Gespräche von öffentlichen Raeumen auf private Messaging-Apps zu verlagern.',
     category: 'communication',
     severity: 'high',
-    explanation: 'Private Messaging-Apps bieten Groomern mehr Kontrolle und weniger Sichtbarkeit. Oeffentliche Kommunikation kann von anderen gesehen werden, private Nachrichten nicht.',
+    explanation: 'Private Messaging-Apps bieten Groomern mehr Kontrolle und weniger Sichtbarkeit. Öffentliche Kommunikation kann von anderen gesehen werden, private Nachrichten nicht.',
     examples: [
-      'Bitte, von einem oeffentlichen Chat zu WhatsApp oder Telegram zu wechseln',
+      'Bitte, von einem öffentlichen Chat zu WhatsApp oder Telegram zu wechseln',
       'Vorschlag, sich auf einer privaten Plattform zu unterhalten',
       'Druck, eine bestimmte App herunterzuladen',
-      'Behauptung, dass die oeffentliche Plattform "nicht sicher" sei'
+      'Behauptung, dass die öffentliche Plattform "nicht sicher" sei'
     ],
-    whyImportant: 'Der Wechsel zu privaten Plattformen macht es schwieriger, die Kommunikation zu ueberwachen und zu dokumentieren. Groomer nutzen dies, um ungestoert manipulieren zu koennen.'
+    whyImportant: 'Der Wechsel zu privaten Plattformen macht es schwieriger, die Kommunikation zu überwachen und zu dokumentieren. Groomer nutzen dies, um ungestoert manipulieren zu können.'
   },
   {
     id: 'ws4',
-    title: 'Uebermaessige Geschenke oder Komplimente',
-    description: 'Das Kind mit Geschenken, Geld, Spielgegenstaenden oder uebermaessigen Komplimenten ueberschuetten.',
+    title: 'Übermäßige Geschenke oder Komplimente',
+    description: 'Das Kind mit Geschenken, Geld, Spielgegenstaenden oder übermaessigen Komplimenten überschuetten.',
     category: 'behavior',
     severity: 'medium',
-    explanation: 'Groomer nutzen Geschenke und uebermaessige Komplimente, um Schuldgefuehle zu erzeugen und das Kind emotional abhaengig zu machen. Das Kind soll sich verpflichtet fuehlen.',
+    explanation: 'Groomer nutzen Geschenke und übermaessige Komplimente, um Schuldgefühle zu erzeugen und das Kind emotional abhängig zu machen. Das Kind soll sich verpflichtet fühlen.',
     examples: [
       'Angebot von kostenlosen Spielzeugen, Geld oder Geschenken',
-      'Uebermaessige Komplimente ueber Aussehen oder Persoenlichkeit',
+      'Übermäßige Komplimente über Aussehen oder Persönlichkeit',
       'Versprechen von teuren Geschenken oder Privilegien',
       '"Du bist so besonders, niemand versteht dich so wie ich"'
     ],
-    whyImportant: 'Echte Freundschaften basieren nicht auf Geschenken. Uebermaessige Geschenke sind oft ein Versuch, das Kind zu manipulieren und Schuldgefuehle zu erzeugen.'
+    whyImportant: 'Echte Freundschaften basieren nicht auf Geschenken. Übermäßige Geschenke sind oft ein Versuch, das Kind zu manipulieren und Schuldgefühle zu erzeugen.'
   },
   {
     id: 'ws5',
     title: 'Anfrage nach Fotos oder Videos',
-    description: 'Bitte um Fotos, insbesondere persoenliche oder unangemessene.',
+    description: 'Bitte um Fotos, insbesondere persönliche oder unangemessene.',
     category: 'requests',
     severity: 'critical',
-    explanation: 'Fotos koennen zur Erpressung genutzt werden oder als "Beweis" dienen, dass das Kind "interessiert" sei. Einmal geteilt, kann das Kind die Kontrolle ueber diese Bilder verlieren.',
+    explanation: 'Fotos können zur Erpressung genutzt werden oder als "Beweis" dienen, dass das Kind "interessiert" sei. Einmal geteilt, kann das Kind die Kontrolle über diese Bilder verlieren.',
     examples: [
       'Bitte um ein aktuelles Foto "nur um zu sehen, wie du aussiehst"',
       'Anfrage nach Fotos in bestimmter Kleidung',
       'Druck, mehr Fotos zu senden, nachdem bereits welche geteilt wurden',
       'Bitte um Videos oder Live-Streams'
     ],
-    whyImportant: 'Fotos koennen missbraucht werden, um das Kind zu erpressen oder zu manipulieren. Sobald ein Foto gesendet wurde, kann es weiterverbreitet werden, ohne dass das Kind Kontrolle darueber hat.'
+    whyImportant: 'Fotos können missbraucht werden, um das Kind zu erpressen oder zu manipulieren. Sobald ein Foto gesendet wurde, kann es weiterverbreitet werden, ohne dass das Kind Kontrolle darüber hat.'
   },
   {
     id: 'ws6',
-    title: 'Emotionale Abhaengigkeit schaffen',
+    title: 'Emotionale Abhängigkeit schaffen',
     description: 'Sich als die einzige Person darstellen, die das Kind "versteht".',
     category: 'isolation',
     severity: 'high',
-    explanation: 'Groomer versuchen, das Kind glauben zu lassen, dass nur sie es wirklich verstehen. Dies schafft emotionale Abhaengigkeit und macht es schwieriger, die Beziehung zu beenden.',
+    explanation: 'Groomer versuchen, das Kind glauben zu lassen, dass nur sie es wirklich verstehen. Dies schafft emotionale Abhängigkeit und macht es schwieriger, die Beziehung zu beenden.',
     examples: [
       '"Nur ich verstehe dich wirklich"',
       '"Deine Freunde verstehen dich nicht, aber ich schon"',
       '"Ich bin immer fuer dich da, wenn du mich brauchst"',
-      '"Wir sind so aehnlich, niemand sonst versteht uns"'
+      '"Wir sind so ähnlich, niemand sonst versteht uns"'
     ],
-    whyImportant: 'Gesunde Beziehungen basieren auf Gleichberechtigung, nicht auf Abhaengigkeit. Wenn jemand behauptet, der "Einzige" zu sein, der das Kind versteht, ist das ein Warnsignal.'
+    whyImportant: 'Gesunde Beziehungen basieren auf Gleichberechtigung, nicht auf Abhängigkeit. Wenn jemand behauptet, der "Einzige" zu sein, der das Kind versteht, ist das ein Warnsignal.'
   },
   {
     id: 'ws7',
@@ -99,27 +99,27 @@ export const warningSigns: WarningSign[] = [
     severity: 'high',
     explanation: 'Groomer geben sich haeufig als Gleichaltrige aus, um Vertrauen zu gewinnen. Ein Erwachsener, der vorgibt, ein Kind zu sein, ist immer verdaechtig.',
     examples: [
-      'Behauptung, im gleichen Alter zu sein, obwohl das Profilbild aelter aussieht',
+      'Behauptung, im gleichen Alter zu sein, obwohl das Profilbild älter aussieht',
       'Widerspruechliche Angaben zum Alter',
       'Ungewoehnlich reife Sprache fuer das angegebene Alter',
       'Weigerung, ein aktuelles Foto zu zeigen'
     ],
-    whyImportant: 'Erwachsene, die sich als Kinder ausgeben, haben immer schlechte Absichten. Echte Gleichaltrige verhalten sich anders und haben aehnliche Interessen und Erfahrungen.'
+    whyImportant: 'Erwachsene, die sich als Kinder ausgeben, haben immer schlechte Absichten. Echte Gleichaltrige verhalten sich anders und haben ähnliche Interessen und Erfahrungen.'
   },
   {
     id: 'ws8',
-    title: 'Vorschlag persoenlicher Treffen',
-    description: 'Bitte um persoenliches Treffen, Angebot zum Abholen oder Vorschlag von Orten.',
+    title: 'Vorschlag persönlicher Treffen',
+    description: 'Bitte um persönliches Treffen, Angebot zum Abholen oder Vorschlag von Orten.',
     category: 'requests',
     severity: 'critical',
-    explanation: 'Persoenliche Treffen sind das gefaehrlichste Stadium des Groomings. Groomer versuchen, das Kind in eine Situation zu bringen, in der sie vollstaendige Kontrolle haben.',
+    explanation: 'Persönliche Treffen sind das gefährlichste Stadium des Groomings. Groomer versuchen, das Kind in eine Situation zu bringen, in der sie vollstaendige Kontrolle haben.',
     examples: [
-      'Vorschlag, sich persoenlich zu treffen',
+      'Vorschlag, sich persönlich zu treffen',
       'Angebot, das Kind abzuholen',
       'Bitte um ein Treffen ohne Eltern oder Freunde',
       'Vorschlag von abgelegenen Orten fuer ein Treffen'
     ],
-    whyImportant: 'Persoenliche Treffen mit Online-Bekanntschaften sind extrem gefaehrlich. Groomer koennen das Kind entfuehren, missbrauchen oder in gefaehrliche Situationen bringen.'
+    whyImportant: 'Persönliche Treffen mit Online-Bekanntschaften sind extrem gefährlich. Groomer können das Kind entführen, missbrauchen oder in gefährliche Situationen bringen.'
   },
   {
     id: 'ws9',
@@ -127,10 +127,10 @@ export const warningSigns: WarningSign[] = [
     description: 'Aktive Entmutigung des Kindes, mit Eltern oder Erziehungsberechtigten zu sprechen.',
     category: 'isolation',
     severity: 'critical',
-    explanation: 'Groomer wissen, dass Eltern und Erzieher eine Bedrohung fuer ihre Plaene darstellen. Sie versuchen aktiv, das Kind davon abzuhalten, Hilfe zu suchen.',
+    explanation: 'Groomer wissen, dass Eltern und Erzieher eine Bedrohung fuer ihre Pläne darstellen. Sie versuchen aktiv, das Kind davon abzuhalten, Hilfe zu suchen.',
     examples: [
       'Kritik an den Eltern oder Erziehern',
-      'Behauptung, dass Eltern "zu streng" oder "nicht verstaendnisvoll" seien',
+      'Behauptung, dass Eltern "zu streng" oder "nicht verständnisvoll" seien',
       'Druck, Dinge vor den Eltern geheim zu halten',
       'Vorschlag, dass das Kind "alt genug" sei, um eigene Entscheidungen zu treffen'
     ],
@@ -147,8 +147,8 @@ export const warningSigns: WarningSign[] = [
       'Sexuelle Witze oder Kommentare',
       'Teilen von unangemessenen Bildern oder Videos',
       'Fragen nach sexuellen Erfahrungen',
-      'Vorschlag von sexuellen Aktivitaeten'
+      'Vorschlag von sexuellen Aktivitäten'
     ],
-    whyImportant: 'Gespraeche mit Gleichaltrigen oder Erwachsenen sollten niemals sexuelle Themen enthalten, wenn es um ein Kind geht. Dies ist immer unangemessen und ein klares Warnsignal.'
+    whyImportant: 'Gespräche mit Gleichaltrigen oder Erwachsenen sollten niemals sexuelle Themen enthalten, wenn es um ein Kind geht. Dies ist immer unangemessen und ein klares Warnsignal.'
   }
 ];

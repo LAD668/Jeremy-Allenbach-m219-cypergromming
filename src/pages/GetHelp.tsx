@@ -61,8 +61,8 @@ export const GetHelp: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-bold mb-2 text-[#1A1A1A]">Pro Juventute - Beratung + Hilfe</h3>
                 <p className="text-[#6B6B6B] mb-4">
-                  Kostenlose, vertrauliche Unterstuetzung fuer Kinder und Jugendliche. 24/7 verfuegbar.
-                  Hier koennen Sie ueber alles sprechen, was Sie belastet.
+                  Kostenlose, vertrauliche Unterstützung für Kinder und Jugendliche. 24/7 verfügbar.
+                  Hier können Sie über alles sprechen, was Sie belastet.
                 </p>
                 <a href="tel:147" className="inline-block">
                   <Button variant="primary" size="small" className="w-full">
@@ -78,8 +78,8 @@ export const GetHelp: React.FC = () => {
                 <h3 className="text-xl font-bold mb-2 text-[#1A1A1A]">Cyberkriminalitaet melden</h3>
                 <p className="text-lg font-bold text-[#1D4ED8] mb-2">Online melden</p>
                 <p className="text-[#6B6B6B] mb-4">
-                  Melden Sie Cyber-Grooming und Online-Ausbeutung den Behoerden.
-                  Sie koennen auch anonym melden.
+                  Melden Sie Cyber-Grooming und Online-Ausbeutung den Behörden.
+                  Sie können auch anonym melden.
                 </p>
                 <Button variant="primary" size="small" className="w-full">
                   Jetzt melden
@@ -96,7 +96,7 @@ export const GetHelp: React.FC = () => {
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center text-[#1A1A1A]">Was jetzt zu tun ist</h2>
             <p className="text-lg text-center text-[#6B6B6B] mb-12 leading-relaxed">
-              Eine detaillierte Schritt-fuer-Schritt-Anleitung, wenn Sie oder jemand, den Sie kennen, von Cyber-Grooming betroffen sind.
+              Eine detaillierte Schritt-für-Schritt-Anleitung, wenn Sie oder jemand, den Sie kennen, von Cyber-Grooming betroffen sind.
             </p>
             
             <div className="space-y-6">
@@ -105,7 +105,7 @@ export const GetHelp: React.FC = () => {
                   step: 1, 
                   title: 'Kommunikation stoppen', 
                   desc: 'Stoppen Sie sofort alle Kommunikation mit der Person, die Sie groomt. Blockieren Sie sie auf allen Plattformen und Apps.',
-                  details: 'Der erste und wichtigste Schritt ist, den Kontakt sofort zu beenden. Blockieren Sie die Person auf allen Plattformen, Apps und Geraeten. Loeschen Sie keine Nachrichten oder Beweise, aber stoppen Sie alle weitere Kommunikation. Wenn die Person versucht, ueber andere Wege Kontakt aufzunehmen, blockieren Sie auch diese.',
+                  details: 'Der erste und wichtigste Schritt ist, den Kontakt sofort zu beenden. Blockieren Sie die Person auf allen Plattformen, Apps und Geraeten. Loeschen Sie keine Nachrichten oder Beweise, aber stoppen Sie alle weitere Kommunikation. Wenn die Person versucht, über andere Wege Kontakt aufzunehmen, blockieren Sie auch diese.',
                   actions: [
                     'Person auf allen Plattformen blockieren',
                     'Privatsphaere-Einstellungen anpassen',
@@ -116,8 +116,8 @@ export const GetHelp: React.FC = () => {
                 { 
                   step: 2, 
                   title: 'Beweise nicht loeschen', 
-                  desc: 'Speichern Sie Screenshots, Nachrichten, Fotos und alle anderen Beweise. Dies ist wichtig fuer die Meldung und Hilfe.',
-                  details: 'Beweise sind entscheidend, um Grooming zu melden und zu stoppen. Machen Sie Screenshots von allen Nachrichten, Profilen und Interaktionen. Speichern Sie diese an einem sicheren Ort, den nur Sie oder eine vertrauenswuerdige Person kennen. Beweise koennen auch bei der polizeilichen Ermittlung helfen.',
+                  desc: 'Speichern Sie Screenshots, Nachrichten, Fotos und alle anderen Beweise. Dies ist wichtig für die Meldung und Hilfe.',
+                  details: 'Beweise sind entscheidend, um Grooming zu melden und zu stoppen. Machen Sie Screenshots von allen Nachrichten, Profilen und Interaktionen. Speichern Sie diese an einem sicheren Ort, den nur Sie oder eine vertrauenswuerdige Person kennen. Beweise können auch bei der polizeilichen Ermittlung helfen.',
                   actions: [
                     'Screenshots von allen Nachrichten machen',
                     'Profilinformationen dokumentieren',
@@ -128,8 +128,8 @@ export const GetHelp: React.FC = () => {
                 { 
                   step: 3, 
                   title: 'Jemandem vertrauen', 
-                  desc: 'Sprechen Sie mit einem Elternteil, Erziehungsberechtigten, Lehrer, Berater oder einer anderen vertrauenswuerdigen Person. Sie muessen das nicht alleine bewaeltigen.',
-                  details: 'Sie muessen das nicht alleine durchstehen. Suchen Sie sich eine vertrauenswuerdige Person - einen Elternteil, Lehrer, Schulpsychologen oder einen Berater. Diese Person kann Ihnen helfen, die naechsten Schritte zu planen und Unterstuetzung zu finden. Erinnern Sie sich: Hilfe zu suchen ist ein Zeichen von Staerke.',
+                  desc: 'Sprechen Sie mit einem Elternteil, Erziehungsberechtigten, Lehrer, Berater oder einer anderen vertrauenswürdigen Person. Sie müssen das nicht alleine bewältigen.',
+                  details: 'Sie müssen das nicht alleine durchstehen. Suchen Sie sich eine vertrauenswuerdige Person - einen Elternteil, Lehrer, Schulpsychologen oder einen Berater. Diese Person kann Ihnen helfen, die naechsten Schritte zu planen und Unterstützung zu finden. Erinnern Sie sich: Hilfe zu suchen ist ein Zeichen von Stärke.',
                   actions: [
                     'Eine vertrauenswuerdige Person auswaehlen',
                     'In einem ruhigen Moment sprechen',
@@ -140,23 +140,23 @@ export const GetHelp: React.FC = () => {
                 { 
                   step: 4, 
                   title: 'Melden', 
-                  desc: 'Melden Sie das Verhalten der Plattform, auf der es passiert ist, und den oertlichen Behoerden oder Cyberkriminalitaets-Einheiten.',
-                  details: 'Melden Sie den Vorfall sowohl der Plattform als auch den Behoerden. Plattformen koennen Accounts sperren und weitere Schaeden verhindern. Die Polizei kann strafrechtlich ermitteln. Sie koennen auch anonym melden, wenn Sie sich nicht sicher sind. Jede Meldung hilft, andere zu schuetzen.',
+                  desc: 'Melden Sie das Verhalten der Plattform, auf der es passiert ist, und den örtlichen Behörden oder Cyberkriminalitäts-Einheiten.',
+                  details: 'Melden Sie den Vorfall sowohl der Plattform als auch den Behörden. Plattformen können Accounts sperren und weitere Schaeden verhindern. Die Polizei kann strafrechtlich ermitteln. Sie können auch anonym melden, wenn Sie sich nicht sicher sind. Jede Meldung hilft, andere zu schützen.',
                   actions: [
                     'Vorfall bei der Plattform melden (z.B. Instagram, WhatsApp)',
-                    'Bei der Polizei oder Cyberkriminalitaetsstelle melden',
+                    'Bei der Polizei oder Cyberkriminalitätsstelle melden',
                     'Alle gesammelten Beweise mitbringen',
                     'Auch anonyme Meldungen sind moeglich'
                   ]
                 },
                 { 
                   step: 5, 
-                  title: 'Unterstuetzung suchen', 
-                  desc: 'Suchen Sie professionelle Beratung oder Unterstuetzungsdienste. Was passiert ist, ist nicht Ihre Schuld, und Hilfe ist verfuegbar.',
-                  details: 'Professionelle Beratung kann helfen, mit den emotionalen Auswirkungen umzugehen. Es gibt spezialisierte Beratungsstellen, die Erfahrung mit Cyber-Grooming haben. Diese koennen auch bei der Bewaeltigung von Schuldgefuehlen, Angst oder Trauma helfen. Erholung ist moeglich.',
+                  title: 'Unterstützung suchen', 
+                  desc: 'Suchen Sie professionelle Beratung oder Unterstützungsdienste. Was passiert ist, ist nicht Ihre Schuld, und Hilfe ist verfügbar.',
+                  details: 'Professionelle Beratung kann helfen, mit den emotionalen Auswirkungen umzugehen. Es gibt spezialisierte Beratungsstellen, die Erfahrung mit Cyber-Grooming haben. Diese können auch bei der Bewaeltigung von Schuldgefühlen, Angst oder Trauma helfen. Erholung ist moeglich.',
                   actions: [
                     'Beratungsstellen kontaktieren (siehe Hilfe-Telefon Schweiz)',
-                    'Therapeutische Unterstuetzung in Anspruch nehmen',
+                    'Therapeutische Unterstützung in Anspruch nehmen',
                     'Selbsthilfegruppen finden',
                     'Geduld mit sich selbst haben'
                   ]
@@ -197,7 +197,7 @@ export const GetHelp: React.FC = () => {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center text-[#1A1A1A]">Was passiert nach einer Meldung?</h2>
             <p className="text-lg text-center text-[#6B6B6B] mb-10 leading-relaxed">
-              Viele Menschen haben Angst vor dem Melden, weil sie nicht wissen, was danach passiert. Hier ist, was Sie erwarten koennen.
+              Viele Menschen haben Angst vor dem Melden, weil sie nicht wissen, was danach passiert. Hier ist, was Sie erwarten können.
             </p>
             
             <div className="space-y-6">
@@ -242,7 +242,7 @@ export const GetHelp: React.FC = () => {
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#1D4ED8] font-bold mt-1">•</span>
-                    <span>Sie werden ueber den Fortgang informiert</span>
+                    <span>Sie werden über den Fortgang informiert</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#1D4ED8] font-bold mt-1">•</span>
@@ -260,11 +260,11 @@ export const GetHelp: React.FC = () => {
                 <ul className="space-y-2 text-[#6B6B6B]">
                   <li className="flex items-start gap-2">
                     <span className="text-blue-600 font-bold mt-1">✓</span>
-                    <span>Sie koennen auch anonym melden, wenn Sie sich nicht sicher sind</span>
+                    <span>Sie können auch anonym melden, wenn Sie sich nicht sicher sind</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-blue-600 font-bold mt-1">✓</span>
-                    <span>Meldungen helfen, andere zu schuetzen</span>
+                    <span>Meldungen helfen, andere zu schützen</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-blue-600 font-bold mt-1">✓</span>
@@ -272,7 +272,7 @@ export const GetHelp: React.FC = () => {
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-blue-600 font-bold mt-1">✓</span>
-                    <span>Beratungsstellen koennen Sie durch den Prozess begleiten</span>
+                    <span>Beratungsstellen können Sie durch den Prozess begleiten</span>
                   </li>
                 </ul>
               </Card>
@@ -291,14 +291,14 @@ export const GetHelp: React.FC = () => {
                 {[
                   'Sie sind nicht schuld an dem, was passiert ist',
                   'Es ist nie zu spaet, Hilfe zu bekommen',
-                  'Sie muessen das nicht alleine bewaeltigen',
-                  'Meldungen helfen, andere zu schuetzen',
-                  'Erholung ist mit Unterstuetzung moeglich',
-                  'Hilfe zu suchen ist ein Zeichen von Staerke',
-                  'Sie haben das Recht auf Schutz und Unterstuetzung',
-                  'Professionelle Hilfe ist verfuegbar und effektiv',
+                  'Sie müssen das nicht alleine bewältigen',
+                  'Meldungen helfen, andere zu schützen',
+                  'Erholung ist mit Unterstützung moeglich',
+                  'Hilfe zu suchen ist ein Zeichen von Stärke',
+                  'Sie haben das Recht auf Schutz und Unterstützung',
+                  'Professionelle Hilfe ist verfügbar und effektiv',
                   'Jeder Fall ist wichtig und sollte gemeldet werden',
-                  'Sie sind nicht allein - viele Menschen haben aehnliche Erfahrungen gemacht'
+                  'Sie sind nicht allein - viele Menschen haben ähnliche Erfahrungen gemacht'
                 ].map((reminder, index) => (
                   <div key={index} className="flex items-center gap-3 p-4 bg-[#F5F1EB] rounded-2xl">
                     <span className="text-[#1D4ED8] font-bold text-xl">✓</span>
@@ -322,12 +322,12 @@ export const GetHelp: React.FC = () => {
                 Sie haben nichts falsch gemacht. Das Problem liegt beim Taeter, nicht beim Opfer.
               </p>
               <p className="text-lg text-[#6B6B6B] mb-4 leading-relaxed">
-                Hilfe zu suchen ist ein Zeichen von Staerke, nicht von Schwaeche. Es erfordert Mut, ueber schwierige Erfahrungen
-                zu sprechen und Unterstuetzung zu suchen. Sie muessen das nicht alleine durchstehen.
+                Hilfe zu suchen ist ein Zeichen von Stärke, nicht von Schwaeche. Es erfordert Mut, über schwierige Erfahrungen
+                zu sprechen und Unterstützung zu suchen. Sie müssen das nicht alleine durchstehen.
               </p>
               <p className="text-lg text-[#6B6B6B] leading-relaxed">
-                Erinnern Sie sich: Es gibt Menschen und Organisationen, die Ihnen helfen wollen und koennen.
-                Nutzen Sie die Hilfe-Telefone, Beratungsstellen und Unterstuetzungsdienste. Sie sind nicht allein.
+                Erinnern Sie sich: Es gibt Menschen und Organisationen, die Ihnen helfen wollen und können.
+                Nutzen Sie die Hilfe-Telefone, Beratungsstellen und Unterstützungsdienste. Sie sind nicht allein.
               </p>
             </Card>
           </div>

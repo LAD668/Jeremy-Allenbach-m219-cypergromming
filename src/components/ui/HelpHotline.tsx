@@ -19,15 +19,15 @@ const hotlines: Hotline[] = [
   {
     name: 'Pro Juventute - Beratung + Hilfe 147',
     phone: '147',
-    description: 'Kostenlose, anonyme Beratung fuer Kinder und Jugendliche rund um die Uhr. Unterstützung bei Cyber-Mobbing, digitaler Gewalt und Cyber-Grooming.',
-    hours: '24/7 verfuegbar',
+    description: 'Kostenlose, anonyme Beratung für Kinder und Jugendliche rund um die Uhr. Unterstützung bei Cyber-Mobbing, digitaler Gewalt und Cyber-Grooming.',
+    hours: '24/7 verfügbar',
     link: 'https://www.projuventute.ch/de/beratung-hilfe-147',
     chatLink: 'https://www.147.ch/'
   },
   {
     name: 'Kinderschutz Schweiz - Clickandstop',
     phone: '0800 117 117',
-    description: 'Nationale Meldestelle fuer paedokriminelle Inhalte. Anonyme Meldung und umfassende Beratungsangebote.',
+    description: 'Nationale Meldestelle für pädokriminelle Inhalte. Anonyme Meldung und umfassende Beratungsangebote.',
     hours: 'Mo-Fr, 09:00-17:00',
     link: 'https://www.clickandstop.ch/',
     email: 'info@clickandstop.ch'
@@ -35,7 +35,7 @@ const hotlines: Hotline[] = [
   {
     name: '#NetzCourage - Fachstelle gegen Digitale Gewalt',
     phone: '044 586 86 86',
-    description: 'Fachstelle gegen digitale Gewalt. Unterstützung fuer Betroffene von Cyber-Grooming und anderen Formen digitaler Gewalt.',
+    description: 'Fachstelle gegen digitale Gewalt. Unterstützung für Betroffene von Cyber-Grooming und anderen Formen digitaler Gewalt.',
     hours: 'Mo-Fr, 09:00-17:00',
     link: 'https://netzcourage.ch/',
     email: 'info@netzcourage.ch'
@@ -56,7 +56,7 @@ export const HelpHotline: React.FC<HelpHotlineProps> = ({ variant = 'full' }) =>
               </div>
               <p className="text-sm text-[#6B6B6B]">{hotline.description}</p>
               {hotline.hours && (
-                <p className="text-xs text-[#6B6B6B] mt-2">Oeffnungszeiten: {hotline.hours}</p>
+                <p className="text-xs text-[#6B6B6B] mt-2">Öffnungszeiten: {hotline.hours}</p>
               )}
             </div>
           ))}
@@ -73,7 +73,7 @@ export const HelpHotline: React.FC<HelpHotlineProps> = ({ variant = 'full' }) =>
             Hilfe-Telefon Schweiz
           </h2>
           <p className="text-lg text-[#6B6B6B] text-center mb-10 leading-relaxed">
-            Kostenlose und vertrauliche Unterstützung fuer Betroffene von Cyber-Grooming und deren Angehoerige.
+            Kostenlose und vertrauliche Unterstützung für Betroffene von Cyber-Grooming und deren Angehörige.
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -98,7 +98,7 @@ export const HelpHotline: React.FC<HelpHotlineProps> = ({ variant = 'full' }) =>
                 
                 {hotline.hours && (
                   <p className="text-sm text-[#6B6B6B] mb-4">
-                    <span className="font-semibold">Oeffnungszeiten:</span> {hotline.hours}
+                    <span className="font-semibold">Öffnungszeiten:</span> {hotline.hours}
                   </p>
                 )}
                 

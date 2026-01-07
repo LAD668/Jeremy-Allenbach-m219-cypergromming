@@ -31,7 +31,7 @@ export const VideoEmbed: React.FC<VideoEmbedProps> = ({
         <p className="text-[#6B6B6B] mb-6">Hier sind alternative Ressourcen:</p>
         <div className="space-y-3">
           <Link to="/protection" className="block text-[#1A1A1A] hover:underline font-medium">
-            Schutz & Praevention
+            Schutz & Prävention
           </Link>
           <Link to="/learning-area" className="block text-[#1A1A1A] hover:underline font-medium">
             Interaktive Lernumgebung
