@@ -4,7 +4,7 @@ export type Phase = 'Kontakt' | 'Vertrauen' | 'Abhängigkeit' | 'Grenzverschiebu
 
 export interface MessageTemplate {
   text: string;
-  warningSigns: ('persönliche-fragen' | 'geheimnisse' | 'druck' | 'schuld' | 'isolation' | 'exklusivität' | 'bild-anfrage')[];
+  warningSigns: ('persönliche-fragen' | 'geheimnisse' | 'druck' | 'schuld' | 'isolation' | 'exklusivität' | 'bild-anfrage' | 'kontrollierend' | 'abhängigkeit')[];
 }
 
 export interface ScenarioLibrary {

@@ -24,25 +24,6 @@ interface SessionProfile {
   escalationSpeed: 'sehr langsam' | 'mittel' | 'schnell';
 }
 
-// Map old profile format to new format
-function mapPersonalityToPersona(personalityType: string): Persona {
-  if (personalityType.includes('charmant')) return 'charmant';
-  if (personalityType.includes('verletzlich') || personalityType.includes('bemitleidenswert')) return 'verletzlich';
-  if (personalityType.includes('cool') || personalityType.includes('locker')) return 'cool';
-  if (personalityType.includes('beschützend') || personalityType.includes('heroisch')) return 'beschützend';
-  if (personalityType.includes('kontrollierend') || personalityType.includes('eifersüchtig')) return 'kontrollierend';
-  return 'charmant'; // default
-}
-
-function mapStrategyToLibrary(strategy: string): Strategy {
-  if (strategy.includes('Komplimente') || strategy.includes('Nähe') || strategy.includes('Vertrauensaufbau') || strategy.includes('Bindung')) return 'komplimente';
-  if (strategy.includes('Geheimnisse') || strategy.includes('Exklusivität')) return 'geheimnisse';
-  if (strategy.includes('Schuld') || strategy.includes('Druck')) return 'schuld';
-  if (strategy.includes('Exklusivität')) return 'exklusivität';
-  if (strategy.includes('Isolation') || strategy.includes('Opferrolle')) return 'isolation';
-  return 'komplimente'; // default
-}
-
 function generateSessionProfile(): SessionProfile {
   const personas: Persona[] = ['charmant', 'verletzlich', 'cool', 'beschützend', 'kontrollierend'];
   const strategies: Strategy[] = ['komplimente', 'geheimnisse', 'schuld', 'exklusivität', 'isolation'];
